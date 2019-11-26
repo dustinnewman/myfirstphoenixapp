@@ -1,6 +1,9 @@
-const WaterCooler = {
+const Chat = {
     init(socket) {
-        const channel = socket.channel("water_cooler:lobby", {});
+        const path = window.location.pathname.split("/");
+        const room = path[path.length - 1];
+
+        const channel = socket.channel("chat:" + room, {});
         channel.join();
 
         this.listenForChats(channel);
@@ -28,4 +31,4 @@ const WaterCooler = {
     }
 }
 
-export default WaterCooler;
+export default Chat;

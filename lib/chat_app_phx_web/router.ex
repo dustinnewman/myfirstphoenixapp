@@ -16,6 +16,7 @@ defmodule ChatAppPhxWeb.Router do
   scope "/", ChatAppPhxWeb do
     pipe_through :browser
 
+    resources "/c", ChatController, only: [:show]
     get "/", PageController, :index
   end
 

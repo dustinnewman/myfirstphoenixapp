@@ -5,6 +5,7 @@ defmodule ChatAppPhx.Chats.Message do
   schema "messages" do
     field :body, :string
     field :name, :string
+    field :room, :string
 
     timestamps()
   end
@@ -12,7 +13,7 @@ defmodule ChatAppPhx.Chats.Message do
   @doc false
   def changeset(message, attrs) do
     message
-    |> cast(attrs, [:name, :body])
-    |> validate_required([:name, :body])
+    |> cast(attrs, [:name, :body, :room])
+    |> validate_required([:name, :body, :room])
   end
 end

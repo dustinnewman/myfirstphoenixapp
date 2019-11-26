@@ -3,7 +3,7 @@ defmodule ChatAppPhxWeb.UserSocket do
 
   ## Channels
   # channel "room:*", ChatAppPhxWeb.RoomChannel
-  channel "water_cooler:*", ChatAppPhxWeb.WaterCoolerChannel
+  channel "chat:*", ChatAppPhxWeb.ChatChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
